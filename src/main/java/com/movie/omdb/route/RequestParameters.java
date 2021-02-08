@@ -24,7 +24,7 @@ public class RequestParameters {
 				.type(RestParamType.query)
 				.dataType("string")
 				.description("Year of the movie, String due to bug")
-				.example("2018")
+				.example("2001")
 				.required(false);
 	}
 	
