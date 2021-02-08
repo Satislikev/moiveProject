@@ -16,6 +16,9 @@
 	<description>OMDB transformation project</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>Satislikev_moiveProject</sonar.projectKey>
+		<sonar.organization>satislikev</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -99,7 +102,7 @@
 						</exclude>
 					</excludes>
 				</configuration>
-				
+
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

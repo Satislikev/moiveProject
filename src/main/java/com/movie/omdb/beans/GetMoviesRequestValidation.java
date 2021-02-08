@@ -16,7 +16,7 @@ import com.movie.omdb.constants.PlotEnum;
 
 @Component
 public class GetMoviesRequestValidation {
-	public void validateRequest(Exchange exchange) throws Exception {
+	public void validateRequest(Exchange exchange) throws ValidationException  {
 		// Title validations and adding as property
 		String movieTitle = exchange.getIn().getHeader(HEADER_MOVIE_TITLE.getValue(), String.class);
 		if (StringUtils.isBlank(movieTitle))

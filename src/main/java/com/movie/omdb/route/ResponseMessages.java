@@ -7,6 +7,10 @@ import com.movie.omdb.model.GetMoviesResponse;
 
 public class ResponseMessages {
 	
+	private ResponseMessages(){
+		
+	}
+	
 	public static RestOperationResponseMsgDefinition getMovie200() {
 		return new RestOperationResponseMsgDefinition()
 				.code(200)
@@ -27,7 +31,7 @@ public class ResponseMessages {
 				.responseModel(ErrorResponse.class);
 	}
 	
-	public static RestOperationResponseMsgDefinition InternalError() {
+	public static RestOperationResponseMsgDefinition internalError() {
 		return new RestOperationResponseMsgDefinition()
 				.code(500)
 				.message("Internal error due to technical problems.")

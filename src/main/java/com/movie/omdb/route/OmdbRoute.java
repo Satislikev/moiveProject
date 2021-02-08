@@ -17,7 +17,7 @@ import com.movie.omdb.model.GetMoviesResponse;
 @Component
 public class OmdbRoute extends RouteBuilder {
 
-	private final static Logger logger = LoggerFactory.getLogger(OmdbRoute.class);
+	private static final Logger logger = LoggerFactory.getLogger(OmdbRoute.class);
 
 	@Override
 	public void configure() throws Exception {
@@ -35,7 +35,7 @@ public class OmdbRoute extends RouteBuilder {
 			.param(RequestParameters.movieTitleParam())
 			.param(RequestParameters.movieYearParam())
 			.responseMessage(ResponseMessages.getMovie200())
-			.responseMessage(ResponseMessages.InternalError())
+			.responseMessage(ResponseMessages.internalError())
 			.responseMessage(ResponseMessages.notFound())
 			.responseMessage(ResponseMessages.validationError())
 			.produces(MediaType.APPLICATION_JSON_VALUE + ", " + MediaType.APPLICATION_XML_VALUE)

@@ -11,7 +11,7 @@ import javassist.NotFoundException;
 
 @Component
 public class ErrorHandler {
-	public void handleError(Exchange exchange) throws Exception {
+	public void handleError(Exchange exchange) {
 
 		Exception cause = exchange.getProperty(Exchange.EXCEPTION_CAUGHT, Exception.class);
 		
@@ -36,7 +36,6 @@ public class ErrorHandler {
 			error.setMessage(cause.getMessage());
 			exchange.getIn().setHeader(Exchange.HTTP_RESPONSE_CODE, 500);
 			exchange.getIn().setBody(error);
-			return;
 		}
 		
 	}

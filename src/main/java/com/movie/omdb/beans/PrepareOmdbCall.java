@@ -18,7 +18,7 @@ public class PrepareOmdbCall {
 	@Value("${omdb.api-key}")
 	private String omdbApiKey;
 
-	public void prepareHttpRequest(Exchange exchange) throws Exception {
+	public void prepareHttpRequest(Exchange exchange)  {
 		exchange.getIn().removeHeaders("*", HEADER_MOVIE_PLOT.getValue(), HEADER_MOVIE_TITLE.getValue(),
 				HEADER_MOVIE_YEAR.getValue(), "accept");
 		exchange.getIn().setHeader(Exchange.HTTP_URI, omdbHost);

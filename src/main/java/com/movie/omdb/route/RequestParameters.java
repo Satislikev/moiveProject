@@ -11,11 +11,16 @@ import org.apache.camel.model.rest.RestParamType;
 
 public class RequestParameters {
 	
+	private final static String TYPE_STRING = "string";
+	
+	private RequestParameters(){
+		
+	}
 	public static RestOperationParamDefinition movieTitleParam() {
 		return new RestOperationParamDefinition()
 				.name(HEADER_MOVIE_TITLE.getValue())
 				.type(RestParamType.query)
-				.dataType("string")
+				.dataType(TYPE_STRING)
 				.description("Title of the movie")
 				.example("Lord Of the Rings")
 				.required(true);
@@ -25,7 +30,7 @@ public class RequestParameters {
 		return new RestOperationParamDefinition()
 				.name(HEADER_MOVIE_YEAR.getValue())
 				.type(RestParamType.query)
-				.dataType("string")
+				.dataType(TYPE_STRING)
 				.description("Year of the movie, String due to bug")
 				.example("2001")
 				.required(false);
@@ -35,7 +40,7 @@ public class RequestParameters {
 		return new RestOperationParamDefinition()
 				.name(HEADER_MOVIE_PLOT.getValue())
 				.type(RestParamType.query)
-				.dataType("string")
+				.dataType(TYPE_STRING)
 				.allowableValues(PLOT_FULL.getValue(),PLOT_SHORT.getValue())
 				.description("Plot of moview")
 				.example("short")

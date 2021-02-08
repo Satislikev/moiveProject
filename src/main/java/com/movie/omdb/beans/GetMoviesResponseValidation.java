@@ -11,7 +11,7 @@ import javassist.NotFoundException;
 
 @Component
 public class GetMoviesResponseValidation {
-	public void validateResponse(Exchange exchange) throws Exception {
+	public void validateResponse(Exchange exchange) throws NotFoundException, ValidationException  {
 
 		GetMoviesResponse response = exchange.getIn().getBody(GetMoviesResponse.class);
 		if (response.getResponse().equalsIgnoreCase("false")) {
