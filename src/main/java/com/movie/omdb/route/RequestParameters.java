@@ -1,7 +1,10 @@
 package com.movie.omdb.route;
 
-import static com.movie.omdb.constants.PlotEnum.*;
-import static com.movie.omdb.constants.RouteEnum.*;
+import static com.movie.omdb.constants.PlotEnum.PLOT_FULL;
+import static com.movie.omdb.constants.PlotEnum.PLOT_SHORT;
+import static com.movie.omdb.constants.RouteEnum.HEADER_MOVIE_PLOT;
+import static com.movie.omdb.constants.RouteEnum.HEADER_MOVIE_TITLE;
+import static com.movie.omdb.constants.RouteEnum.HEADER_MOVIE_YEAR;
 
 import org.apache.camel.model.rest.RestOperationParamDefinition;
 import org.apache.camel.model.rest.RestParamType;

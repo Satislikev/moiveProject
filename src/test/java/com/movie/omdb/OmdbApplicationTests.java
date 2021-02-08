@@ -137,7 +137,7 @@ class OmdbApplicationTests {
 		headers.add("accept", "application/json");
 		HttpEntity<?> entity = new HttpEntity<>(headers);
 
-		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(restTemplate.getRootUri()).path(contextPath);;
+		UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(restTemplate.getRootUri()).path(contextPath);
 
 		ResponseEntity<String> response = restTemplate.exchange(builder.toUriString(), HttpMethod.GET, entity,
 				String.class);

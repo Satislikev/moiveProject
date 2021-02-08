@@ -17,7 +17,7 @@ import com.movie.omdb.model.GetMoviesResponse;
 @Component
 public class OmdbRoute extends RouteBuilder {
 
-	final static Logger logger = LoggerFactory.getLogger(OmdbRoute.class);
+	private final static Logger logger = LoggerFactory.getLogger(OmdbRoute.class);
 
 	@Override
 	public void configure() throws Exception {
